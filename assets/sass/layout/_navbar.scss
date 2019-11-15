@@ -1,1 +1,46 @@
 // NAVBAR
+nav {
+    #top-nav{
+        @include basic-flex();
+
+    }
+    #bottom-nav{
+        @include basic-flex();
+        
+        position: relative;
+        z-index: 10;
+
+        height: $bottom-nav-height;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    ul{
+        @include basic-flex();
+
+        height: 100%;
+        width: auto;
+        background-color: #EEE;
+
+        li{
+            @include basic-flex();
+
+            height: 100%;
+            width: auto;
+            padding: 0px 20px;
+            background-color: #111;
+            color: #FFF;
+        }
+
+        li:first-child {
+            &::before{
+                height: 50px;
+                width: 50px;
+                background-color: blue;
+                content: "";
+                background: url();
+                margin-right: 20px;
+            }
+        }
+    }
+}
