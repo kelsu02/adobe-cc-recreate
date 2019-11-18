@@ -1,9 +1,74 @@
 // NAVBAR
 nav {
     #top-nav{
-        @include basic-flex();
+        @include basic-flex(space-between, center, row);
 
+        background: white;
+        width: 100%;
+        max-width: 1440px;
+        height: 60px;
+
+        color: $lgrey;
+        font: {
+            size: 13px;
+            weight: 600;
+        }
+
+        .logo {
+            padding: 0px 20px;
+
+            color: $dgrey;
+
+            font: {
+                size: 16px;
+                weight: 400;
+            }
+                span {
+                    margin-left: 5px;
+                }
+
+        }
+
+        ul{
+            @include basic-flex();
+
+            height: 100%;
+            width: auto;
+
+            li{ 
+                @include basic-flex();
+
+                height: 100%;
+                width: auto;
+                padding: 0px 20px;
+               
+                &:hover {
+                    background-color: #f4f4f4;
+                    color: $dgrey;
+                }
+
+                cursor: pointer;
+            }
+
+        }
     }
+
+    #right-side {
+        @include basic-flex();
+        
+        margin-right: 20px;
+       
+        svg {
+            padding: 0px 9px;
+            fill: $lgrey;
+
+            &:hover {
+                fill: $blue;
+            }
+        }
+    }
+
+
     #bottom-nav{
         @include basic-flex();
         
@@ -12,34 +77,45 @@ nav {
 
         height: $bottom-nav-height;
         width: 100vw;
-        background-color: rgba(0, 0, 0, .5);
-    }
+        background-color: rgba(0, 0, 0, .7);
 
-    ul{
-        @include basic-flex();
+        font-size: 13px;
 
-        height: 100%;
-        width: auto;
-        background-color: #EEE;
-
-        li{
+        ul{
             @include basic-flex();
 
             height: 100%;
             width: auto;
-            padding: 0px 20px;
-            background-color: #111;
-            color: #FFF;
-        }
+           
 
-        li:first-child {
-            &::before{
-                height: 50px;
-                width: 50px;
-                background-color: blue;
-                content: "";
-                background: url();
-                margin-right: 20px;
+            li {
+                @include basic-flex();
+
+                height: 100%;
+                width: auto;
+                padding: 0px 20px;
+                color: #FFF;
+
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+
+            
+
+            li:first-child {
+                &::before{
+                    height: 50px;
+                    width: 50px;
+                    background: url(../../imgs/creativecloudicon.svg) center center / cover no-repeat;
+                    // margin-right: 20px;
+                }
+
+            .element {
+                margin: 10px 0px;
+            }
             }
         }
     }
