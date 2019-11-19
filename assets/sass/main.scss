@@ -5,7 +5,11 @@
 @import 'abstracts/placeholders';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
+@import 'base/typography';
+@import 'components/buttons';
 
 @import 'themes/theme';
+@import 'layout/navbar';
+@import 'pages/home';
 
 // MASTER OVERRIDES BELOW
