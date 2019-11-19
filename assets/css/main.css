@@ -243,21 +243,30 @@ nav #bottom-nav ul li {
   width: auto;
   padding: 0px 20px;
   color: #FFF;
+}
+
+nav #bottom-nav ul li:nth-child(1) {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav #bottom-nav ul li:nth-child(1)::before {
+  content: url("/assets/imgs/creativecloudicon.svg");
+  height: auto;
+  width: 33px;
+  margin-right: 15px;
+}
+
+nav #bottom-nav ul li:not(:first-child):not(:nth-child(5)) {
   cursor: pointer;
 }
 
-nav #bottom-nav ul li:hover {
+nav #bottom-nav ul li:not(:first-child):not(:nth-child(5)):hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-nav #bottom-nav ul li:first-child::before {
-  height: 50px;
-  width: 50px;
-  background: url(../../imgs/creativecloudicon.svg) center center/cover no-repeat;
-}
-
-nav #bottom-nav ul li:first-child .element {
-  margin: 10px 0px;
+nav #bottom-nav ul li:nth-child(5) {
+  height: 40%;
 }
 
 #home-hero {
@@ -278,7 +287,7 @@ nav #bottom-nav ul li:first-child .element {
   top: -80px;
   z-index: 5;
   height: auto;
-  min-height: 480px;
+  min-height: 560px;
   width: 100vw;
 }
 
